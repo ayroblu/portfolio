@@ -1,0 +1,5 @@
+export const gold = '#ECD078'
+export const orange = '#D95B43'
+export const red = '#C02942'
+export const purple = '#542437'
+export const grey = '#53777A'
