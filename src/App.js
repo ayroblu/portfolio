@@ -13,7 +13,7 @@ class App extends Component {
           Hi, I'm a tinkerer and developer
         </p>
         <p className="App-text">
-          As a developer I focus primarily on javascript projects, but have experience in Java, Rails and various other languages
+          As a developer I focus primarily on javascript projects, but have experience in Java, Ruby(on Rails), python, php, C, C++, C#, Visual Basic
         </p>
         <p className="App-text">
           Here's a list of things I do
