@@ -4,9 +4,22 @@ import * as MathJax from 'react-mathjax-updated'
 //import * as MathJax from 'react-mathjax'
 import './App.css'
 
-const tex = `f(x) = \\int_{-\\infty}^\\infty
-    \\hat f(\\xi)\\,e^{2 \\pi i \\xi x}
-    \\,d\\xi`
+const vTerminal = `v_{terminal} = \\sqrt{\\frac{2 m g}{C_d A \\rho}}`
+const vInitial = `v_{initial} = v_{arrow} \\times \\sin(\\theta)`
+const uInitial = `v_{initial} = v_{arrow} \\times \\cos(\\theta)`
+const v = `v = v_{terminal} \\times 
+  \\frac{v_{initial} - v_{terminal} \\tan\\left(\\frac{t g}{v_{terminal}}\\right)}{
+  v_{terminal} + v_{initial} \\tan\\left(\\frac{tg}{v_{terminal}}\\right)}`
+const u = `u = \\frac{v_{terminal}^2 u_{initial}}{v_{terminal}^2 + g u_{initial} t}`
+const velocity = `v_{abs} = \\sqrt{u^2 + v^2}`
+const y = `y = \\frac{v_{terminal}^2}{2g} \\times \\log{\\left(\\frac{v_{initial}^2+v_{terminal}^2}{v^2 + v_{terminal}^2}\\right)}`
+const x = `x = \\frac{v_{terminal}^2}{g} \\times \\log{\\left(\\frac{v_{terminal}^2 + g u_{initial} t}{v_{terminal}^2}\\right)}`
+
+const targetAngle = `\\theta_{target} = \\tan^{-1}{\\left(\\frac{s_{vertical}}{s_{horizontal}}\\right)}`
+const alpha = `\\alpha = \\theta_{target} - \\tan^{-1}{\\left(\\frac{s_{jaw} \\cos\\theta_{target}}{s_{horizontal}}\\right)}`
+const phi = `\\phi = \\theta - \\alpha`
+const sightHeight = `s_{sight} = s_{jaw} - s_{arm} \\tan(\\phi)`
+
 class App extends Component {
   render() {
     return (
@@ -17,14 +30,6 @@ class App extends Component {
         <p className="App-text">
           Hi, I'm a tinkerer and developer
         </p>
-        <MathJax.Context>
-            <div>
-                This is an inline math formula: <MathJax.Node inline>{'a = b'}</MathJax.Node>
-                And a block one:
-
-                <MathJax.Node>{tex}</MathJax.Node>
-            </div>
-        </MathJax.Context>
         <p className="App-text">
           As a developer I focus primarily on javascript projects, but have experience in Java, Ruby(on Rails), python, php, C, C++, C#, Visual Basic
         </p>
@@ -37,8 +42,26 @@ class App extends Component {
   * I have a recurve, compound and horsebow
   * I've made a couple of apps to help with my Archery
   * Solve these equations for arrow flight
-    * Insert LaTeX equations here
+`} />
+        <MathJax.Context>
+          <div className='mathjax-node-parent'>
+            <MathJax.Node>{vTerminal}</MathJax.Node>
+            <MathJax.Node>{vInitial}</MathJax.Node>
+            <MathJax.Node>{uInitial}</MathJax.Node>
+            <MathJax.Node>{v}</MathJax.Node>
+            <MathJax.Node>{u}</MathJax.Node>
+            <MathJax.Node>{velocity}</MathJax.Node>
+            <MathJax.Node>{y}</MathJax.Node>
+            <MathJax.Node>{x}</MathJax.Node>
 
+            <MathJax.Node>{targetAngle}</MathJax.Node>
+            <MathJax.Node>{alpha}</MathJax.Node>
+            <MathJax.Node>{phi}</MathJax.Node>
+            <MathJax.Node>{sightHeight}</MathJax.Node>
+          </div>
+        </MathJax.Context>
+
+        <ReactMarkdown className='App-markdown' source={`
 * University of Auckland
   * Bachelor of Engineering (Honours) specialising in Engineering Science
     * Operations Research

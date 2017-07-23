@@ -19,3 +19,20 @@
   padding: 0 20px;
   max-width: 700px;
 }
+.mathjax-node-parent{
+  animation: fadeIn 2s 1s backwards ease-in;
+}
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+    filter: blur(10px);
+  }
+  80%{
+    opacity: 0.5;
+    filter: blur(5px);
+  }
+  to{
+    opacity: 1;
+    filter: none;
+  }
+}
