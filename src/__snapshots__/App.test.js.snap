@@ -1,0 +1,423 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="App-header"
+  >
+    <h1>
+      Ben Lu Portfolio
+    </h1>
+  </div>
+  <p
+    className="App-text"
+  >
+    Hi, I'm a tinkerer and developer
+  </p>
+  <p
+    className="App-text"
+  >
+    As a developer I focus primarily on javascript projects, but have experience in Java, Rails and various other languages
+  </p>
+  <p
+    className="App-text"
+  >
+    Here's a list of things I do
+  </p>
+  <div
+    className="App-markdown"
+  >
+    <h1
+      className={undefined}
+      data-sourcepos={undefined}
+    >
+      Who am I
+    </h1>
+    <ul
+      className={undefined}
+      data-sourcepos={undefined}
+    >
+      <li>
+        <p>
+          Archery
+        </p>
+        <ul
+          className={undefined}
+          data-sourcepos={undefined}
+        >
+          <li>
+            I have a recurve, compound and horsebow
+          </li>
+          <li>
+            I've made a couple of apps to help with my Archery
+          </li>
+          <li>
+            Solve these equations for arrow flight
+            <ul
+              className={undefined}
+              data-sourcepos={undefined}
+            >
+              <li>
+                Insert LaTeX equations here
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          University of Auckland
+        </p>
+        <ul
+          className={undefined}
+          data-sourcepos={undefined}
+        >
+          <li>
+            Bachelor of Engineering (Honours) specialising in Engineering Science
+            <ul
+              className={undefined}
+              data-sourcepos={undefined}
+            >
+              <li>
+                Operations Research
+              </li>
+              <li>
+                Fluid Dynamics
+              </li>
+              <li>
+                Geothermal Engineering
+              </li>
+              <li>
+                Software Engineering
+              </li>
+            </ul>
+          </li>
+          <li>
+            Bachelor of Commerce majoring in Economics
+            <ul
+              className={undefined}
+              data-sourcepos={undefined}
+            >
+              <li>
+                Economics
+              </li>
+              <li>
+                Finance
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h1
+      className={undefined}
+      data-sourcepos={undefined}
+    >
+      What I do
+    </h1>
+    <ul
+      className={undefined}
+      data-sourcepos={undefined}
+    >
+      <li>
+        <p>
+          Machine Learning
+        </p>
+      </li>
+      <li>
+        <p>
+          Javascript: This is my primarily language
+        </p>
+      </li>
+      <li>
+        <p>
+          npm packages
+        </p>
+        <ul
+          className={undefined}
+          data-sourcepos={undefined}
+        >
+          <li>
+            db-difftool
+            <ul
+              className={undefined}
+              data-sourcepos={undefined}
+            >
+              <li>
+                CLI tool
+              </li>
+              <li>
+                Makes keeping track of databases easier
+              </li>
+              <li>
+                https://github.com/ayroblu/db-difftool
+              </li>
+            </ul>
+          </li>
+          <li>
+            redux-add
+            <ul
+              className={undefined}
+              data-sourcepos={undefined}
+            >
+              <li>
+                CLI tool for adding redux files
+              </li>
+              <li>
+                https://github.com/ayroblu/redux-add
+              </li>
+            </ul>
+          </li>
+          <li>
+            react-native-redux-log-monitor
+            <ul
+              className={undefined}
+              data-sourcepos={undefined}
+            >
+              <li>
+                React native component for using with react-native for displaying redux without js debugging
+              </li>
+              <li>
+                https://github.com/ayroblu/react-native-redux-log-monitor
+              </li>
+            </ul>
+          </li>
+          <li>
+            object-type-check
+            <ul
+              className={undefined}
+              data-sourcepos={undefined}
+            >
+              <li>
+                This adds a basic type check at runtime thus allowing for a simple type check of objects
+              </li>
+              <li>
+                https://github.com/ayroblu/object-type-check
+              </li>
+              <li>
+                Testing for types
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          github
+        </p>
+        <ul
+          className={undefined}
+          data-sourcepos={undefined}
+        >
+          <li>
+            https://github.com/ayroblu
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          Medium posts
+        </p>
+        <ul
+          className={undefined}
+          data-sourcepos={undefined}
+        >
+          <li>
+            https://hackernoon.com/server-side-rendering-with-create-react-app-1faf5a9d1eff
+            <ul
+              className={undefined}
+              data-sourcepos={undefined}
+            >
+              <li>
+                Source Code: https://github.com/ayroblu/ssr-create-react-app
+              </li>
+            </ul>
+          </li>
+          <li>
+            https://medium.com/@benlu/ssr-with-create-react-app-v2-1b8b520681d9
+            <ul
+              className={undefined}
+              data-sourcepos={undefined}
+            >
+              <li>
+                Source Code: https://github.com/ayroblu/ssr-create-react-app-v2
+              </li>
+              <li>
+                Demo Deployed: https://ssr-cra-v2.now.sh/
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          List of projects
+        </p>
+        <ul
+          className={undefined}
+          data-sourcepos={undefined}
+        >
+          <li>
+            Android (2013)
+            <ul
+              className={undefined}
+              data-sourcepos={undefined}
+            >
+              <li>
+                NZ Weather and Traffic
+                <ul
+                  className={undefined}
+                  data-sourcepos={undefined}
+                >
+                  <li>
+                    https://play.google.com/store/apps/details?id=benl.student.datacol&hl=en
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Archery Scorer
+                <ul
+                  className={undefined}
+                  data-sourcepos={undefined}
+                >
+                  <li>
+                    https://play.google.com/store/apps/details?id=benl.student.archeryscorer
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            React Native
+            <ul
+              className={undefined}
+              data-sourcepos={undefined}
+            >
+              <li>
+                ArcheryNotes
+                <ul
+                  className={undefined}
+                  data-sourcepos={undefined}
+                >
+                  <li>
+                    https://github.com/ayroblu/ArcheryNotes
+                  </li>
+                  <li>
+                    JS Testing: Jest + snapshot testing
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            First website
+            http://ben-l.com
+          </li>
+          <li>
+            aklbuses.nz
+            <ul
+              className={undefined}
+              data-sourcepos={undefined}
+            >
+              <li>
+                Live Auckland Buses
+              </li>
+              <li>
+                Shows the locations of Auckland buses in real time to the nearest 30 seconds
+              </li>
+              <li>
+                https://github.com/ayroblu/aklbuses.nz
+              </li>
+            </ul>
+          </li>
+          <li>
+            webrec.ayro.nz
+            <ul
+              className={undefined}
+              data-sourcepos={undefined}
+            >
+              <li>
+                Video Delay
+              </li>
+              <li>
+                Simply uses chrome's video support, delays video for archery coaching
+              </li>
+              <li>
+                https://github.com/ayroblu/video-delay
+              </li>
+            </ul>
+          </li>
+          <li>
+            royalgameofur.site
+            <ul
+              className={undefined}
+              data-sourcepos={undefined}
+            >
+              <li>
+                Royal Game of Ur
+              </li>
+              <li>
+                An implementation of the Royal Game of Ur based on: https://www.youtube.com/watch?v=WZskjLq040I
+              </li>
+              <li>
+                https://github.com/ayroblu/royal-game-of-ur
+              </li>
+            </ul>
+          </li>
+          <li>
+            ayro.nz
+            <ul
+              className={undefined}
+              data-sourcepos={undefined}
+            >
+              <li>
+                https://ayro.nz/
+              </li>
+              <li>
+                Contact page: for business enquiries
+              </li>
+            </ul>
+          </li>
+          <li>
+            archery.ayro.nz
+            <ul
+              className={undefined}
+              data-sourcepos={undefined}
+            >
+              <li>
+                https://archery.ayro.nz/
+              </li>
+              <li>
+                JS Testing: Jest + equation solving
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          Selenium screenshot testing - take a snapshot, if different (b64) then generate a difference html page?
+        </p>
+        <ul
+          className={undefined}
+          data-sourcepos={undefined}
+        >
+          <li>
+            You can literally run a test, if they're different, run a different test / function in a new browser window
+            <ul
+              className={undefined}
+              data-sourcepos={undefined}
+            >
+              <li>
+                Use selenium to upload this file to it and show the difference between two images
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
