@@ -1,7 +1,12 @@
 import React, { Component } from 'react'
 import ReactMarkdown from 'react-markdown'
+import * as MathJax from 'react-mathjax-updated'
+//import * as MathJax from 'react-mathjax'
 import './App.css'
 
+const tex = `f(x) = \\int_{-\\infty}^\\infty
+    \\hat f(\\xi)\\,e^{2 \\pi i \\xi x}
+    \\,d\\xi`
 class App extends Component {
   render() {
     return (
@@ -12,6 +17,14 @@ class App extends Component {
         <p className="App-text">
           Hi, I'm a tinkerer and developer
         </p>
+        <MathJax.Context>
+            <div>
+                This is an inline math formula: <MathJax.Node inline>{'a = b'}</MathJax.Node>
+                And a block one:
+
+                <MathJax.Node>{tex}</MathJax.Node>
+            </div>
+        </MathJax.Context>
         <p className="App-text">
           As a developer I focus primarily on javascript projects, but have experience in Java, Ruby(on Rails), python, php, C, C++, C#, Visual Basic
         </p>
