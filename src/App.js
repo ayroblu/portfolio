@@ -50,15 +50,6 @@ class App extends Component {
           </div>
         </p>
         <p className="App-text">
-          University of Auckland - Commerce, Economics? (just show some old notes?)
-        </p>
-        <p className="App-text">
-          University of Auckland - Engineering - See 4th year project + video - maybe discuss geothermal?
-        </p>
-        <p className="App-text">
-          University of Washington - Exchange - photos
-        </p>
-        <p className="App-text">
           npm - logo + package names and descriptions
         </p>
         <p className="App-text">
@@ -75,6 +66,15 @@ class App extends Component {
         </p>
         <p className="App-text">
           other projects - royalgameofur.site, ayro.nz, archery.ayro.nz, webgl?, selenium test?
+        </p>
+        <p className="App-text">
+          University of Auckland - Commerce, Economics? (just show some old notes?)
+        </p>
+        <p className="App-text">
+          University of Auckland - Engineering - See 4th year project + video - maybe discuss geothermal?
+        </p>
+        <p className="App-text">
+          University of Washington - Exchange - photos
         </p>
         <p className="App-text">
           Archery - to bottom, just some beautiful archery shots and math - show all three bows
