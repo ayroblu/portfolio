@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  padding-left: 256px;
 }
 
 .App-header {
@@ -27,6 +28,12 @@
 }
 .Languages > *{
   margin: 5px 10px;
+}
+.npm-logo{
+  width: 200px;
+}
+.medium-logo{
+  width: 300px;
 }
 .mathjax-node-parent{
   animation: fadeIn 2s 1s backwards ease-in;

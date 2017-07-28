@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
 import ReactMarkdown from 'react-markdown'
 import * as MathJax from 'react-mathjax-updated'
+import GoMarkGithub from 'react-icons/lib/go/mark-github'
+import Drawer from 'material-ui/Drawer'
+import MenuItem from 'material-ui/MenuItem'
+
+import mediumLogo from './img/medium-lockup-dark.png'
+import npmLogo from './img/npm.png'
 //import * as MathJax from 'react-mathjax'
 import './App.css'
 
@@ -21,15 +27,34 @@ const phi = `\\phi = \\theta - \\alpha`
 const sightHeight = `s_{sight} = s_{jaw} - s_{arm} \\tan(\\phi)`
 
 class App extends Component {
+  componentWillMount(){
+    this.state = {open: window.innerWidth > 600}
+  }
+  componentDidMount() {
+    window.addEventListener("resize", this.updatePage)
+  }
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updatePage)
+  }
+  updatePage = ()=>{
+    this.forceUpdate()
+  }
   render() {
+    const docked = window.innerWidth > 600
     return (
       <div className="App">
+        <Drawer open={this.state.open} docked={docked}>
+          <MenuItem>Menu Item</MenuItem>
+          <MenuItem>Menu Item 2</MenuItem>
+        </Drawer>
         <div className="App-header">
           <h1>Ben Lu Portfolio</h1>
         </div>
-        <p className="App-text">
-          Hi, I'm a tinkerer and developer - github icon
-        </p>
+        <div>
+          <p className="App-text">
+            Hi, I'm a tinkerer and developer -
+          </p><GoMarkGithub />
+        </div>
         <p className="App-text">
           Need to show some kind of navigation - drawer - just use the materia-ui
         </p>
@@ -39,7 +64,7 @@ class App extends Component {
         <p className="App-text">
           Grouped languages with frameworks - images - links
         </p>
-        <p className="App-text Languages">
+        <div className="App-text Languages">
           <div>
             <div>JavaScript</div>
             <div>Stars: 4.5</div>
@@ -48,12 +73,32 @@ class App extends Component {
             <div>Java</div>
             <div>Stars: 3</div>
           </div>
-        </p>
-        <p className="App-text">
+        </div>
+        <div className="App-text">
+          <img className='npm-logo' src={npmLogo} alt='npm logo' />
           npm - logo + package names and descriptions
-        </p>
+    * db-difftool
+        * CLI tool
+        * Makes keeping track of databases easier
+        * https://github.com/ayroblu/db-difftool
+    * redux-add
+        * CLI tool for adding redux files
+        * https://github.com/ayroblu/redux-add
+    * react-native-redux-log-monitor
+        * React native component for using with react-native for displaying redux without js debugging
+        * https://github.com/ayroblu/react-native-redux-log-monitor
+    * object-type-check
+      * This adds a basic type check at runtime thus allowing for a simple type check of objects
+      * https://github.com/ayroblu/object-type-check
+      * Testing for types
+        </div>
         <p className="App-text">
-          medium articles
+          <img className='medium-logo' src={mediumLogo} alt='medium logo' />
+  * https://hackernoon.com/server-side-rendering-with-create-react-app-1faf5a9d1eff
+    * Source Code: https://github.com/ayroblu/ssr-create-react-app
+  * https://medium.com/@benlu/ssr-with-create-react-app-v2-1b8b520681d9
+    * Source Code: https://github.com/ayroblu/ssr-create-react-app-v2
+    * Demo Deployed: https://ssr-cra-v2.now.sh/
         </p>
         <p className="App-text">
           projects - aklbuses.nz, video-delay, object-type-check
