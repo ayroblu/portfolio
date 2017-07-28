@@ -19,6 +19,15 @@
   padding: 0 20px;
   max-width: 700px;
 }
+.Languages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: white;
+}
+.Languages > *{
+  margin: 5px 10px;
+}
 .mathjax-node-parent{
   animation: fadeIn 2s 1s backwards ease-in;
 }

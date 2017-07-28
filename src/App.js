@@ -28,13 +28,56 @@ class App extends Component {
           <h1>Ben Lu Portfolio</h1>
         </div>
         <p className="App-text">
-          Hi, I'm a tinkerer and developer
+          Hi, I'm a tinkerer and developer - github icon
+        </p>
+        <p className="App-text">
+          Need to show some kind of navigation - drawer - just use the materia-ui
         </p>
         <p className="App-text">
           As a developer I focus primarily on javascript projects, but have experience in Java, Ruby(on Rails), python, php, C, C++, C#, Visual Basic
         </p>
         <p className="App-text">
-          Here's a list of things I do
+          Grouped languages with frameworks - images - links
+        </p>
+        <p className="App-text Languages">
+          <div>
+            <div>JavaScript</div>
+            <div>Stars: 4.5</div>
+          </div>
+          <div>
+            <div>Java</div>
+            <div>Stars: 3</div>
+          </div>
+        </p>
+        <p className="App-text">
+          University of Auckland - Commerce, Economics? (just show some old notes?)
+        </p>
+        <p className="App-text">
+          University of Auckland - Engineering - See 4th year project + video - maybe discuss geothermal?
+        </p>
+        <p className="App-text">
+          University of Washington - Exchange - photos
+        </p>
+        <p className="App-text">
+          npm - logo + package names and descriptions
+        </p>
+        <p className="App-text">
+          medium articles
+        </p>
+        <p className="App-text">
+          projects - aklbuses.nz, video-delay, object-type-check
+        </p>
+        <p className="App-text">
+          React Native
+        </p>
+        <p className="App-text">
+          Old Android Projects
+        </p>
+        <p className="App-text">
+          other projects - royalgameofur.site, ayro.nz, archery.ayro.nz, webgl?, selenium test?
+        </p>
+        <p className="App-text">
+          Archery - to bottom, just some beautiful archery shots and math - show all three bows
         </p>
         <ReactMarkdown className='App-markdown' source={`
 # Who am I
@@ -73,8 +116,6 @@ class App extends Component {
     * Finance
 
 # What I do
-* Machine Learning
-
 * Javascript: This is my primarily language
 * npm packages
     * db-difftool
@@ -110,7 +151,7 @@ class App extends Component {
           * https://github.com/ayroblu/ArcheryNotes
           * JS Testing: Jest + snapshot testing
     * First website
-      http://ben-l.com
+      * http://ben-l.com
     * aklbuses.nz
       * Live Auckland Buses
       * Shows the locations of Auckland buses in real time to the nearest 30 seconds
@@ -140,4 +181,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App
