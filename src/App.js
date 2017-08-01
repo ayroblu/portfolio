@@ -43,7 +43,7 @@ class App extends Component {
     const docked = window.innerWidth > 600
     return (
       <div className="App">
-        <Drawer open={this.state.open} docked={docked}>
+        <Drawer open={this.state.open} docked={docked} onRequestChange={open=>this.setState({open})}>
           <MenuItem>Menu Item</MenuItem>
           <MenuItem>Menu Item 2</MenuItem>
         </Drawer>
