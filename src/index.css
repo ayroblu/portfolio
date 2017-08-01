@@ -8,9 +8,18 @@ body {
 h1, p{
   font-weight: 300;
 }
+h2, h3{
+  font-weight: 400;
+}
 a{
   text-decoration: none;
 }
 a:hover{
   text-decoration: underline;
+}
+a.no-dec:hover{
+  text-decoration: none;
+}
+a:visited{
+  color: inherit;
 }
