@@ -5,6 +5,7 @@ import GoMarkGithub from 'react-icons/lib/go/mark-github'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 
+import {cn} from './utils'
 import mediumLogo from './img/medium-lockup-dark.png'
 import npmLogo from './img/npm.png'
 //import * as MathJax from 'react-mathjax'
@@ -37,119 +38,154 @@ class App extends Component {
     window.removeEventListener("resize", this.updatePage)
   }
   updatePage = ()=>{
+    const docked = window.innerWidth > 600
+    if (docked) {
+      this.setState({open: true})
+      return
+    }
     this.forceUpdate()
   }
   render() {
     const docked = window.innerWidth > 600
     return (
-      <div className="App">
-        <Drawer open={this.state.open} docked={docked} onRequestChange={open=>this.setState({open})}>
-          <MenuItem>Menu Item</MenuItem>
-          <MenuItem>Menu Item 2</MenuItem>
+      <div className={cn("App", docked && 'docked')}>
+        <Drawer open={this.state.open}
+          docked={docked}
+          onRequestChange={open=>this.setState({open})}
+          width={200}
+        >
+          <div className='Drawer-top'>
+            <GoMarkGithub size={30} color='white'/><span>Ben's Profile</span>
+          </div>
+          <a href='#software'>
+            <MenuItem>Software Development</MenuItem>
+          </a>
+          <a href='#npm'>
+            <MenuItem>npm packages</MenuItem>
+          </a>
+          <a href='#medium'>
+            <MenuItem>Medium articles</MenuItem>
+          </a>
+          <a href='#projects'>
+            <MenuItem>Projects</MenuItem>
+          </a>
+          <a href='#react-native'>
+            <MenuItem>React Native</MenuItem>
+          </a>
+          <a href='#android'>
+            <MenuItem>Old Android Projects</MenuItem>
+          </a>
+          <a href='#other-projects'>
+            <MenuItem>Other Projects</MenuItem>
+          </a>
+          <a href='#university'>
+            <MenuItem>University of Auckland</MenuItem>
+          </a>
         </Drawer>
         <div className="App-header">
           <h1>Ben Lu Portfolio</h1>
         </div>
-        <div>
+        <div className='App-content'>
+          <div>
+            <p className="App-text">
+              Hi, I'm a tinkerer and developer -
+            </p><GoMarkGithub size={30} />
+          </div>
           <p className="App-text">
-            Hi, I'm a tinkerer and developer -
-          </p><GoMarkGithub />
-        </div>
-        <p className="App-text">
-          Need to show some kind of navigation - drawer - just use the materia-ui
-        </p>
-        <p className="App-text">
-          As a developer I focus primarily on javascript projects, but have experience in Java, Ruby(on Rails), python, php, C, C++, C#, Visual Basic
-        </p>
-        <p className="App-text">
-          Grouped languages with frameworks - images - links
-        </p>
-        <div className="App-text Languages">
-          <div>
-            <div>JavaScript</div>
-            <div>Stars: 4.5</div>
+            Need to show some kind of navigation - drawer - just use the materia-ui
+          </p>
+          <p className="App-text">
+            As a developer I focus primarily on javascript projects, but have experience in Java, Ruby(on Rails), python, php, C, C++, C#, Visual Basic
+          </p>
+          <p className="App-text">
+            Grouped languages with frameworks - images - links
+          </p>
+          <div className="App-text Languages">
+            <div>
+              <div>JavaScript</div>
+              <div>Stars: 4.5</div>
+            </div>
+            <div>
+              <div>Java</div>
+              <div>Stars: 3</div>
+            </div>
           </div>
-          <div>
-            <div>Java</div>
-            <div>Stars: 3</div>
+          <div className="App-text">
+            <img className='npm-logo' src={npmLogo} alt='npm logo' />
+            npm - logo + package names and descriptions
+      * db-difftool
+          * CLI tool
+          * Makes keeping track of databases easier
+          * https://github.com/ayroblu/db-difftool
+      * redux-add
+          * CLI tool for adding redux files
+          * https://github.com/ayroblu/redux-add
+      * react-native-redux-log-monitor
+          * React native component for using with react-native for displaying redux without js debugging
+          * https://github.com/ayroblu/react-native-redux-log-monitor
+      * object-type-check
+        * This adds a basic type check at runtime thus allowing for a simple type check of objects
+        * https://github.com/ayroblu/object-type-check
+        * Testing for types
           </div>
-        </div>
-        <div className="App-text">
-          <img className='npm-logo' src={npmLogo} alt='npm logo' />
-          npm - logo + package names and descriptions
-    * db-difftool
-        * CLI tool
-        * Makes keeping track of databases easier
-        * https://github.com/ayroblu/db-difftool
-    * redux-add
-        * CLI tool for adding redux files
-        * https://github.com/ayroblu/redux-add
-    * react-native-redux-log-monitor
-        * React native component for using with react-native for displaying redux without js debugging
-        * https://github.com/ayroblu/react-native-redux-log-monitor
-    * object-type-check
-      * This adds a basic type check at runtime thus allowing for a simple type check of objects
-      * https://github.com/ayroblu/object-type-check
-      * Testing for types
-        </div>
-        <p className="App-text">
-          <img className='medium-logo' src={mediumLogo} alt='medium logo' />
-  * https://hackernoon.com/server-side-rendering-with-create-react-app-1faf5a9d1eff
-    * Source Code: https://github.com/ayroblu/ssr-create-react-app
-  * https://medium.com/@benlu/ssr-with-create-react-app-v2-1b8b520681d9
-    * Source Code: https://github.com/ayroblu/ssr-create-react-app-v2
-    * Demo Deployed: https://ssr-cra-v2.now.sh/
-        </p>
-        <p className="App-text">
-          projects - aklbuses.nz, video-delay, object-type-check
-        </p>
-        <p className="App-text">
-          React Native
-        </p>
-        <p className="App-text">
-          Old Android Projects
-        </p>
-        <p className="App-text">
-          other projects - royalgameofur.site, ayro.nz, archery.ayro.nz, webgl?, selenium test?
-        </p>
-        <p className="App-text">
-          University of Auckland - Commerce, Economics? (just show some old notes?)
-        </p>
-        <p className="App-text">
-          University of Auckland - Engineering - See 4th year project + video - maybe discuss geothermal?
-        </p>
-        <p className="App-text">
-          University of Washington - Exchange - photos
-        </p>
-        <p className="App-text">
-          Archery - to bottom, just some beautiful archery shots and math - show all three bows
-        </p>
-        <ReactMarkdown className='App-markdown' source={`
+          <p className="App-text">
+            <img className='medium-logo' src={mediumLogo} alt='medium logo' />
+    * https://hackernoon.com/server-side-rendering-with-create-react-app-1faf5a9d1eff
+      * Source Code: https://github.com/ayroblu/ssr-create-react-app
+    * https://medium.com/@benlu/ssr-with-create-react-app-v2-1b8b520681d9
+      * Source Code: https://github.com/ayroblu/ssr-create-react-app-v2
+      * Demo Deployed: https://ssr-cra-v2.now.sh/
+          </p>
+          <p className="App-text">
+            projects - aklbuses.nz, video-delay, object-type-check
+          </p>
+          <p className="App-text">
+            React Native
+          </p>
+          <p className="App-text">
+            Old Android Projects
+          </p>
+          <p className="App-text">
+            other projects - royalgameofur.site, ayro.nz, archery.ayro.nz, webgl?, selenium test?
+          </p>
+          <p className="App-text">
+            University of Auckland - Commerce, Economics? (just show some old notes?)
+          </p>
+          <p className="App-text">
+            University of Auckland - Engineering - See 4th year project + video - maybe discuss geothermal?
+          </p>
+          <p className="App-text">
+            University of Washington - Exchange - photos
+          </p>
+          <p className="App-text">
+            Archery - to bottom, just some beautiful archery shots and math - show all three bows
+          </p>
+          <ReactMarkdown className='App-markdown' source={`
 # Who am I
 * Archery
   * I have a recurve, compound and horsebow
   * I've made a couple of apps to help with my Archery
   * Solve these equations for arrow flight
 `} />
-        <MathJax.Context>
-          <div className='mathjax-node-parent'>
-            <MathJax.Node>{vTerminal}</MathJax.Node>
-            <MathJax.Node>{vInitial}</MathJax.Node>
-            <MathJax.Node>{uInitial}</MathJax.Node>
-            <MathJax.Node>{v}</MathJax.Node>
-            <MathJax.Node>{u}</MathJax.Node>
-            <MathJax.Node>{velocity}</MathJax.Node>
-            <MathJax.Node>{y}</MathJax.Node>
-            <MathJax.Node>{x}</MathJax.Node>
+          <MathJax.Context>
+            <div className='mathjax-node-parent'>
+              <MathJax.Node>{vTerminal}</MathJax.Node>
+              <MathJax.Node>{vInitial}</MathJax.Node>
+              <MathJax.Node>{uInitial}</MathJax.Node>
+              <MathJax.Node>{v}</MathJax.Node>
+              <MathJax.Node>{u}</MathJax.Node>
+              <MathJax.Node>{velocity}</MathJax.Node>
+              <MathJax.Node>{y}</MathJax.Node>
+              <MathJax.Node>{x}</MathJax.Node>
 
-            <MathJax.Node>{targetAngle}</MathJax.Node>
-            <MathJax.Node>{alpha}</MathJax.Node>
-            <MathJax.Node>{phi}</MathJax.Node>
-            <MathJax.Node>{sightHeight}</MathJax.Node>
-          </div>
-        </MathJax.Context>
+              <MathJax.Node>{targetAngle}</MathJax.Node>
+              <MathJax.Node>{alpha}</MathJax.Node>
+              <MathJax.Node>{phi}</MathJax.Node>
+              <MathJax.Node>{sightHeight}</MathJax.Node>
+            </div>
+          </MathJax.Context>
 
-        <ReactMarkdown className='App-markdown' source={`
+          <ReactMarkdown className='App-markdown' source={`
 * University of Auckland
   * Bachelor of Engineering (Honours) specialising in Engineering Science
     * Operations Research
@@ -218,9 +254,8 @@ class App extends Component {
 * Selenium screenshot testing - take a snapshot, if different (b64) then generate a difference html page?
     * You can literally run a test, if they're different, run a different test / function in a new browser window
         * Use selenium to upload this file to it and show the difference between two images
-
-
-        `}/>
+          `}/>
+        </div>
       </div>
     );
   }

@@ -1,6 +1,21 @@
 .App {
   text-align: center;
-  padding-left: 256px;
+}
+.App.docked {
+  padding-left: 200px;
+}
+.Drawer-top {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #D95B43;
+  overflow: auto;
+}
+.Drawer-top > span{
+  margin-left: 10px;
+  color: white;
+  font-size: 20px;
 }
 
 .App-header {
@@ -10,8 +25,12 @@
   color: white;
 }
 
+.App-content {
+  overflow: auto;
+}
 .App-text {
   font-size: large;
+  padding: 0 10px;
 }
 
 .App-markdown {
