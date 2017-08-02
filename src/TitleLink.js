@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import PropTypes from 'prop-types'
+//import PropTypes from 'prop-types'
 import LinkIcon from 'react-icons/lib/fa/external-link'
 import './TitleLink.css'
 

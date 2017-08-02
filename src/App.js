@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import * as MathJax from 'react-mathjax-updated'
 import GoMarkGithub from 'react-icons/lib/go/mark-github'
-import MenuItem from 'material-ui/MenuItem'
 import 'devicon/devicon-colors.css'
 
 import TitleLink from './TitleLink'
@@ -87,7 +86,7 @@ class App extends Component {
                 </TitleLink>
                 <div>
                   <a href='https://coveralls.io/github/ayroblu/object-type-check?branch=master'>
-                    <img src='https://coveralls.io/repos/github/ayroblu/object-type-check/badge.svg?branch=master' />
+                    <img src='https://coveralls.io/repos/github/ayroblu/object-type-check/badge.svg?branch=master' alt='object type check coverage'/>
                   </a>
                   <p>This is a runtime type checker, I wrote this for verifying serialised data, has 100% test coverage</p>
 
@@ -168,7 +167,10 @@ class App extends Component {
             <div>
               <TitleLink><a href='http://royalgameofur.site'>Royal Game of Ur</a></TitleLink>
               <p>Based on this fantastic video, where the basic rules are explained</p>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/WZskjLq040I" frameBorder="0" allowFullScreen></iframe>
+              <iframe width="560" height="315"
+                title='Royal Game of Ur'
+                src="https://www.youtube.com/embed/WZskjLq040I"
+                frameBorder="0" allowFullScreen></iframe>
               <p>https://github.com/ayroblu/royal-game-of-ur</p>
             </div>
             <div>
