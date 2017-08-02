@@ -15,9 +15,10 @@ class DrawerLayout extends Component {
         <a className='Drawer-top no-dec' href='https://github.com/ayroblu'>
           <GoMarkGithub size={30} color='white'/><span>Ben's Profile</span>
         </a>
+        {false &&
         <a href='#software'>
           <MenuItem>Software Development</MenuItem>
-        </a>
+        </a>}
         <a href='#npm'>
           <MenuItem>npm packages</MenuItem>
         </a>
