@@ -10,6 +10,7 @@ import DrawerLayout from './DrawerLayout'
 import {cn} from './utils'
 import vortVid from './video/full6svort.mp4'
 import flapVid from './video/convRender.mp4'
+import firstWebVid from './video/ben-l.mp4'
 import taniwha from './img/taniwhamarketingrender4.jpg'
 import finVel from './img/finfluidvelocity.png'
 import subDrag from './img/simplesubproper.png'
@@ -97,6 +98,7 @@ class App extends Component {
                     <img src='https://coveralls.io/repos/github/ayroblu/object-type-check/badge.svg?branch=master' alt='object type check coverage'/>
                   </a>
                   <p>This is a runtime type checker, I wrote this for verifying serialised data, has 100% test coverage</p>
+                  <a className='source-link no-color' href='https://github.com/ayroblu/object-type-check'><GoMarkGithub size={30} /><span>Source</span></a>
 
                 </div>
               </div>
@@ -108,6 +110,7 @@ class App extends Component {
                 </TitleLink>
                 <div>
                   <p>React Native Navigation has a very easy drawer system, which means you can add this for a slide in from the right option to display redux data without needing to use JS Debugging</p>
+                  <a className='source-link no-color' href='https://github.com/ayroblu/react-native-redux-log-monitor'><GoMarkGithub size={30} /><span>Source</span></a>
                 </div>
               </div>
               <div>
@@ -118,6 +121,7 @@ class App extends Component {
                 </TitleLink>
                 <div>
                   <p>Rather than using migrations, its probably easier just to calculate a diff between a lock configuration and an existing database</p>
+                  <a className='source-link no-color' href='https://github.com/ayroblu/db-difftool'><GoMarkGithub size={30} /><span>Source</span></a>
                 </div>
               </div>
               <div>
@@ -128,6 +132,7 @@ class App extends Component {
                 </TitleLink>
                 <div>
                   <p>A simple CLI tool for adding a couple of redux files</p>
+                  <a className='source-link no-color' href='https://github.com/ayroblu/redux-add'><GoMarkGithub size={30} /><span>Source</span></a>
                 </div>
               </div>
             </div>
@@ -146,7 +151,7 @@ class App extends Component {
                 <img src={aklbuses} alt='Live Auckland Buses'/>
               </div>
               <p>Shows the locations of Auckland buses in real time to the nearest 30 seconds</p>
-              <p>https://github.com/ayroblu/aklbuses.nz</p>
+              <a className='source-link no-color' href='https://github.com/ayroblu/aklbuses.nz'><GoMarkGithub size={30} /><span>Source</span></a>
             </div>
             <div>
               <TitleLink><a href='https://webrec.ayro.nz'>Video Delay</a></TitleLink>
@@ -156,8 +161,8 @@ class App extends Component {
                   Cameras from multiple angles with a light panel for the archer to check their form post shot
                 </span>
               </div>
-              <p>Uses electron for a basic native app</p>
-              <p>https://github.com/ayroblu/video-delay</p>
+              <p>Uses electron for packaging an offline, desktop cross platform app</p>
+              <a className='source-link no-color' href='https://github.com/ayroblu/video-delay'><GoMarkGithub size={30} /><span>Source</span></a>
             </div>
           </div>
           <div id='react-native' className="App-text">
@@ -168,14 +173,20 @@ class App extends Component {
           </div>
           <div id='android' className="App-text">
             <h2 className='SectionTitle'>Old Android Projects (2013)</h2>
-            <p>Archery Scorer</p>
-            <a href='https://play.google.com/store/apps/details?id=benl.student.archeryscorer'>
-              <img src={gplayLogo} className='GoogleLink' alt='Archery Scorer Link' />
-            </a>
-            <p>NZ Weather and Traffic</p>
-            <a href='https://play.google.com/store/apps/details?id=benl.student.datacol&hl=en'>
-              <img src={gplayLogo} className='GoogleLink' alt='NZ Weather and Traffic Link' />
-            </a>
+            <div>
+              <h3>Archery Scorer</h3>
+              <a href='https://play.google.com/store/apps/details?id=benl.student.archeryscorer'>
+                <img src={gplayLogo} className='GoogleLink' alt='Archery Scorer Link' />
+              </a>
+              <a className='source-link no-color' href='https://github.com/ayroblu/ArcherScorer'><GoMarkGithub size={30} /><span>Source</span></a>
+            </div>
+            <div>
+              <h3>NZ Weather and Traffic</h3>
+              <a href='https://play.google.com/store/apps/details?id=benl.student.datacol&hl=en'>
+                <img src={gplayLogo} className='GoogleLink' alt='NZ Weather and Traffic Link' />
+              </a>
+              <a className='source-link no-color' href='https://github.com/ayroblu/nzWeatherTraffic'><GoMarkGithub size={30} /><span>Source</span></a>
+            </div>
           </div>
           <div id='other-projects'>
             <h2 className='SectionTitle'>Other Projects</h2>
@@ -192,19 +203,31 @@ class App extends Component {
               </div>
             </div>
             <div className="App-text">
-              <p>https://github.com/ayroblu/royal-game-of-ur</p>
+              <a className='source-link no-color' href='https://github.com/ayroblu/royal-game-of-ur'><GoMarkGithub size={30} /><span>Source</span></a>
             </div>
-            <div>
+            <div className='App-text'>
               <TitleLink><a href='https://ayro.nz'>Ayro Site</a></TitleLink>
               <p>Contact page: for business enquiries</p>
+              <a className='source-link no-color' href='https://github.com/ayroblu/ayro.nz'><GoMarkGithub size={30} /><span>Source</span></a>
             </div>
-            <div>
+            <div className='App-text'>
               <TitleLink><a href='https://archery.ayro.nz'>Archery Calculator</a></TitleLink>
-              <p>JS Testing: Jest + equation solving</p>
+              <p>This is just a simple website I've created for calculating sight marks using projective motion equations, note the math is further below. With two sight marks, you can work out all other sight marks. It uses a basic bisection method for equation solving</p>
+              <a className='source-link no-color' href='https://github.com/ayroblu/archery-toolbox'><GoMarkGithub size={30} /><span>Source</span></a>
             </div>
             <div>
               <TitleLink><a href='http://ben-l.com'>My First Site</a></TitleLink>
               <p>This is my first ever website, hosted on google apps, with python, and has a pretty nice transition which was built to be compatible (limited) with ie6</p>
+              <div className='captionedImage'>
+                <video autoPlay type="video/mp4" loop>
+                  <source src={firstWebVid} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <span className='caption'>
+                  My First Website, animating through auto typing out text based on "Chuck" tv show, note how the cursor does not start from the center
+                </span>
+              </div>
+              <a className='source-link no-color' href='https://github.com/ayroblu/personal-website-first'><GoMarkGithub size={30} /><span>Source</span></a>
             </div>
           </div>
           <div id='university'>

@@ -7,19 +7,16 @@
 .App.docked {
   padding-left: 200px;
 }
-
 .App-header {
   background-color: #542437;
   height: 50px;
   padding: 20px;
   color: white;
 }
-
 .App-content {
   overflow: auto;
 }
 .App-text {
-  font-size: large;
   padding: 0 10px;
 }
 .GoogleLink{
@@ -41,6 +38,16 @@
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 30px; height: 0; overflow: hidden;
+}
+.source-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.source-link > span{
+  margin-left: 10px;
 }
 .uniImages{
   display: flex;
@@ -77,7 +84,7 @@
 }
 .captionedImage > .caption{
   position: absolute;
-  bottom: 0;
+  bottom: 3px;
   left: 0;
   right: 0;
   color: white;
