@@ -90,7 +90,10 @@
   color: white;
   padding: 20px;
   margin: 0;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.7);
+}
+.App-logo{
+  margin: 20px;
 }
 
 .video-container iframe,

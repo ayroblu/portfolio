@@ -6,6 +6,7 @@ import 'devicon/devicon-colors.css'
 import TitleLink from './TitleLink'
 import MediumArticles from './MediumArticles'
 import Software from './Software'
+import Logo from './Logo'
 import DrawerLayout from './DrawerLayout'
 import {cn} from './utils'
 import vortVid from './video/full6svort.mp4'
@@ -16,6 +17,7 @@ import finVel from './img/finfluidvelocity.png'
 import subDrag from './img/simplesubproper.png'
 import aklbuses from './img/aklbuses-cropped.png'
 import videoDelay from './img/video-delay.jpg'
+import geotherm from './img/geotherm-steam-field.png'
 import mediumLogo from './img/medium-lockup-dark.png'
 import gplayLogo from './img/google-play-badge.png'
 import npmLogo from './img/npm.png'
@@ -72,7 +74,7 @@ class App extends Component {
         <div className='App-content'>
           <div>
             <p className="App-text">
-              Hi, I'm a tinkerer and developer
+              Hi, I'm a tinkerer and developer, I take an interest in a lot of different fields, these are some of the more technical things
             </p><a className='no-color' href='https://github.com/ayroblu'><GoMarkGithub size={50} /></a>
           </div>
           {false &&
@@ -147,34 +149,41 @@ class App extends Component {
             <h2 className='SectionTitle'>Projects</h2>
             <div>
               <TitleLink><a href='https://aklbuses.nz'>Live Auckland Buses</a></TitleLink>
+              <p>Shows the locations of Auckland buses in real time to the nearest 30 seconds because Auckland Transport don't provide a simple interface for seeing this kind of information</p>
               <div>
                 <img src={aklbuses} alt='Live Auckland Buses'/>
               </div>
-              <p>Shows the locations of Auckland buses in real time to the nearest 30 seconds</p>
               <a className='source-link no-color' href='https://github.com/ayroblu/aklbuses.nz'><GoMarkGithub size={30} /><span>Source</span></a>
             </div>
             <div>
               <TitleLink><a href='https://webrec.ayro.nz'>Video Delay</a></TitleLink>
+              <p>Chrome has decent video options for recording and playing videos, and makes it easy to create a flexible video playback system - created for coaching at the Auckland Archery Club</p>
+              <p>Uses electron for packaging an offline, desktop cross platform app</p>
               <div className='captionedImage'>
                 <img src={videoDelay} alt='Archery Video Delay'/>
                 <span className='caption'>
                   Cameras from multiple angles with a light panel for the archer to check their form post shot
                 </span>
               </div>
-              <p>Uses electron for packaging an offline, desktop cross platform app</p>
               <a className='source-link no-color' href='https://github.com/ayroblu/video-delay'><GoMarkGithub size={30} /><span>Source</span></a>
             </div>
           </div>
           <div id='react-native' className="App-text">
             <h2 className='SectionTitle'>React Native</h2>
-            <div>Archery Notes - Android + iOS, thoughts, Code push ?</div>
-            <div>Repo: <a href='https://github.com/ayroblu/ArcheryNotes'>https://github.com/ayroblu/ArcheryNotes</a></div>
-            <div>Jest + snapshot testing</div>
+            <div>
+              <h3>Archery Notes</h3>
+              <p>Designed to be consistent with Android and iOS</p>
+              <p>Is a basic showcase of some of the basic skills associated with React Native development. This includes adding React Native Navigation and Realm, and various Jest testing, it probably could be improved to showcase some of the more advanced skills but feel free to discuss these with me</p>
+              <div>
+                <a className='source-link no-color' href='https://github.com/ayroblu/ArcheryNotes'><GoMarkGithub size={30} /><span>Source</span></a>
+              </div>
+            </div>
           </div>
           <div id='android' className="App-text">
             <h2 className='SectionTitle'>Old Android Projects (2013)</h2>
             <div>
               <h3>Archery Scorer</h3>
+              <p>An app I wrote for calculating my archery scores in 2013</p>
               <a href='https://play.google.com/store/apps/details?id=benl.student.archeryscorer'>
                 <img src={gplayLogo} className='GoogleLink' alt='Archery Scorer Link' />
               </a>
@@ -182,6 +191,7 @@ class App extends Component {
             </div>
             <div>
               <h3>NZ Weather and Traffic</h3>
+              <p>An app I wrote for checking the weather and traffic because it was too frustrating to use publicly provided weather and traffic cameras on my phone</p>
               <a href='https://play.google.com/store/apps/details?id=benl.student.datacol&hl=en'>
                 <img src={gplayLogo} className='GoogleLink' alt='NZ Weather and Traffic Link' />
               </a>
@@ -207,7 +217,10 @@ class App extends Component {
             </div>
             <div className='App-text'>
               <TitleLink><a href='https://ayro.nz'>Ayro Site</a></TitleLink>
-              <p>Contact page: for business enquiries</p>
+              <p>Just a basic contact page, features this icon: </p>
+              <div className='App-logo'>
+                <Logo style={{height: '200px'}} />
+              </div>
               <a className='source-link no-color' href='https://github.com/ayroblu/ayro.nz'><GoMarkGithub size={30} /><span>Source</span></a>
             </div>
             <div className='App-text'>
@@ -238,14 +251,16 @@ class App extends Component {
               <p>Finance</p>
             </div>
             <div className="App-text">
-              <h3> University of Auckland - Bachelor of Engineering (Honours)</h3>
-              <p>4th year project + video -> ANSYS</p>
-              <p>Geothermal</p>
-              <p>Operations Research</p>
-              <p>Fluid Dynamics</p>
-              <p>Software Development</p>
+              <h3>University of Auckland - Bachelor of Engineering (Honours)</h3>
+              <p>This degree covered many different mathematical and modelling topics including Operations Research, Fluid Dynamics, Geothermal Engineering and Software Development</p>
             </div>
             <div className='App-videos'>
+              <div className='captionedImage'>
+                <img src={geotherm} alt='Production data for example geothermal field' />
+                <span className='caption'>
+                  The calculated production output from a model Geothermal field
+                </span>
+              </div>
               <div className='uniImages'>
                 <div>
                   <img src={taniwha} alt='taniwha' className='taniwhaImage' />

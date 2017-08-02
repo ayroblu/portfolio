@@ -1,0 +1,59 @@
+.Logo{
+}
+.Logo path{
+  stroke: #000;
+  stroke-width: 1;
+  stroke-dasharray: 100px;
+  stroke-dashoffset: 100px;
+  animation: draw 3s 1 forwards linear;
+}
+.Logo path.main{
+  stroke: #e30;
+  stroke-dasharray: 3773px;
+  stroke-dashoffset: 3773px;
+}
+.Logo path.second{
+  stroke: #666;
+  stroke-dasharray: 756px;
+  stroke-dashoffset: 756px;
+  animation: draw 3s 1 forwards linear, greyShimmer 0.5s 2s infinite alternate both ease-in-out;
+}
+.Logo.NoAnimation path{
+  animation: none;
+}
+.Logo.NoAnimation stop{
+  animation: none;
+}
+
+@keyframes greyShimmer {
+  to {
+    fill:#888;
+  }
+}
+@keyframes draw {
+  from{
+    fill-opacity: 0;
+  }
+  70%{
+    stroke-dashoffset: 0;
+    fill-opacity: 0;
+    stroke-width: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+    stroke-width: 0;
+    fill-opacity: 1;
+  }
+}
+.Logo .stop1{
+  stop-color:#FF870E;
+}
+.Logo .stop2{
+  stop-color:#C80007;
+  animation: shimmerSecond 0.5s 3s alternate forwards infinite ease-in-out;
+}
+@keyframes shimmerSecond {
+  to {
+    stop-color:#f11;
+  }
+}
