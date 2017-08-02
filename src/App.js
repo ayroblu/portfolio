@@ -8,6 +8,13 @@ import MediumArticles from './MediumArticles'
 import Software from './Software'
 import DrawerLayout from './DrawerLayout'
 import {cn} from './utils'
+import vortVid from './video/full6svort.mp4'
+import flapVid from './video/convRender.mp4'
+import taniwha from './img/taniwhamarketingrender4.jpg'
+import finVel from './img/finfluidvelocity.png'
+import subDrag from './img/simplesubproper.png'
+import aklbuses from './img/aklbuses-cropped.png'
+import videoDelay from './img/video-delay.jpg'
 import mediumLogo from './img/medium-lockup-dark.png'
 import gplayLogo from './img/google-play-badge.png'
 import npmLogo from './img/npm.png'
@@ -65,14 +72,15 @@ class App extends Component {
           <div>
             <p className="App-text">
               Hi, I'm a tinkerer and developer
-            </p><a className='no-color' href='https://github.com/ayroblu'><GoMarkGithub size={30} /></a>
+            </p><a className='no-color' href='https://github.com/ayroblu'><GoMarkGithub size={50} /></a>
           </div>
+          {false &&
           <div id='software'>
             <h2 className='SectionTitle'>
               Software Skills
             </h2>
             <Software />
-          </div>
+          </div>}
           <div id='npm' className="App-text">
             <div className='SectionTitle'>
               <img className='npm-logo' src={npmLogo} alt='npm logo' />
@@ -134,16 +142,23 @@ class App extends Component {
             <h2 className='SectionTitle'>Projects</h2>
             <div>
               <TitleLink><a href='https://aklbuses.nz'>Live Auckland Buses</a></TitleLink>
+              <div>
+                <img src={aklbuses} alt='Live Auckland Buses'/>
+              </div>
               <p>Shows the locations of Auckland buses in real time to the nearest 30 seconds</p>
               <p>https://github.com/ayroblu/aklbuses.nz</p>
             </div>
             <div>
               <TitleLink><a href='https://webrec.ayro.nz'>Video Delay</a></TitleLink>
+              <div className='captionedImage'>
+                <img src={videoDelay} alt='Archery Video Delay'/>
+                <span className='caption'>
+                  Cameras from multiple angles with a light panel for the archer to check their form post shot
+                </span>
+              </div>
               <p>Uses electron for a basic native app</p>
               <p>https://github.com/ayroblu/video-delay</p>
             </div>
-            <div>video-delay</div>
-            <div>object-type-check?</div>
           </div>
           <div id='react-native' className="App-text">
             <h2 className='SectionTitle'>React Native</h2>
@@ -162,15 +177,21 @@ class App extends Component {
               <img src={gplayLogo} className='GoogleLink' alt='NZ Weather and Traffic Link' />
             </a>
           </div>
-          <div id='other-projects' className="App-text">
+          <div id='other-projects'>
             <h2 className='SectionTitle'>Other Projects</h2>
-            <div>
+            <div className="App-text">
               <TitleLink><a href='http://royalgameofur.site'>Royal Game of Ur</a></TitleLink>
               <p>Based on this fantastic video, where the basic rules are explained</p>
-              <iframe width="560" height="315"
-                title='Royal Game of Ur'
-                src="https://www.youtube.com/embed/WZskjLq040I"
-                frameBorder="0" allowFullScreen></iframe>
+            </div>
+            <div className='video-parent-container'>
+              <div className='video-container'>
+                <iframe width="560" height="315"
+                  title='Royal Game of Ur'
+                  src="https://www.youtube.com/embed/WZskjLq040I"
+                  frameBorder="0" allowFullScreen></iframe>
+              </div>
+            </div>
+            <div className="App-text">
               <p>https://github.com/ayroblu/royal-game-of-ur</p>
             </div>
             <div>
@@ -185,10 +206,8 @@ class App extends Component {
               <TitleLink><a href='http://ben-l.com'>My First Site</a></TitleLink>
               <p>This is my first ever website, hosted on google apps, with python, and has a pretty nice transition which was built to be compatible (limited) with ie6</p>
             </div>
-            <div>webgl?</div>
-            <div>selenium test?</div>
           </div>
-          <div id='university' className="App-text">
+          <div id='university'>
             <h2 className='SectionTitle'>University</h2>
             <div>
               <h3>University of Auckland - Bachelor of Commerce</h3>
@@ -202,6 +221,27 @@ class App extends Component {
               <p>Operations Research</p>
               <p>Fluid Dynamics</p>
               <p>Software Development</p>
+            </div>
+            <div className='App-videos'>
+              <div className='uniImages'>
+                <div>
+                  <img src={taniwha} alt='taniwha' className='taniwhaImage' />
+                </div>
+                <div>
+                  <img src={finVel} alt='fin velocity' className='finVelocityImage' />
+                </div>
+                <div>
+                  <img src={subDrag} alt='Sub drag' className='subDragImage' />
+                </div>
+              </div>
+              <video autoPlay type="video/mp4" loop>
+                <source src={vortVid} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <video autoPlay type="video/mp4" loop>
+                <source src={flapVid} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
             <div className="App-text">
               <h3>University of Washington - Exchange</h3>
@@ -231,6 +271,7 @@ class App extends Component {
               </div>
             </MathJax.Context>
           </div>
+          {false &&
           <div>
             <h2>Palette</h2>
             <div style={{backgroundColor: theme.gold, width: 50, height: 50, margin: 'auto'}} />
@@ -238,7 +279,7 @@ class App extends Component {
             <div style={{backgroundColor: theme.red, width: 50, height: 50, margin: 'auto'}} />
             <div style={{backgroundColor: theme.purple, width: 50, height: 50, margin: 'auto'}} />
             <div style={{backgroundColor: theme.grey, width: 50, height: 50, margin: 'auto'}} />
-          </div>
+          </div>}
         </div>
       </div>
     )
