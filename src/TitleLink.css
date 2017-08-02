@@ -15,3 +15,8 @@
 .TitleLink:hover > svg{
   opacity: 1;
 }
+@media(max-width:600px){
+  .TitleLink > svg{
+    display:none;
+  }
+}

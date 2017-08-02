@@ -23,6 +23,6 @@ a.no-dec:hover{
 a.no-color{
   color: inherit;
 }
-img{
+img, video{
   max-width: 100%;
 }

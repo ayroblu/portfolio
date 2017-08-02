@@ -18,6 +18,10 @@
 }
 .App-text {
   padding: 0 10px;
+  overflow: auto;
+}
+.App-scroll{
+  overflow: auto;
 }
 .GoogleLink{
   width: 200px;
@@ -91,6 +95,12 @@
   padding: 20px;
   margin: 0;
   background-color: rgba(0,0,0,0.7);
+}
+@media (max-width: 600px){
+  .captionedImage > .caption{
+    font-size: 0.8rem;
+    padding: 8px;
+  }
 }
 .App-logo{
   margin: 20px;

@@ -286,13 +286,15 @@ class App extends Component {
               <p>photos</p>
             </div>
           </div>
-          <div id='archery' className="App-text">
+          <div id='archery'>
             <h2 className='SectionTitle'>Archery</h2>
-            <p>Photos of all 3 bows</p>
-            <h3>Projectile Motion equations</h3>
-            <p>These are just some basic projectile motion equations which allow you to solve for arrow positioning</p>
+            <div className='App-text'>
+              <p>Photos of all 3 bows</p>
+              <h3>Projectile Motion equations</h3>
+              <p>These are just some basic projectile motion equations which allow you to solve for arrow positioning</p>
+            </div>
             <MathJax.Context>
-              <div className='mathjax-node-parent'>
+              <div className='mathjax-node-parent App-scroll App-text'>
                 <MathJax.Node>{vTerminal}</MathJax.Node>
                 <MathJax.Node>{vInitial}</MathJax.Node>
                 <MathJax.Node>{uInitial}</MathJax.Node>
