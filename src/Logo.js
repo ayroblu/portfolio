@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import './Logo.css'
 
 export default class Logo extends Component {
   static propTypes = {
-    style: React.PropTypes.object,
-    animationDisabled: React.PropTypes.bool
+    style: PropTypes.object,
+    animationDisabled: PropTypes.bool
   }
   componentDidMount(){
     this._first = true
