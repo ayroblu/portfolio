@@ -1,0 +1,19 @@
+.Software{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: white;
+  padding-bottom: 10px;
+  margin: 10px 0;
+}
+.Software > *{
+  margin: 10px 10px 0;
+}
+.Software .TitleLogo{
+  width: 100px;
+  height: 100px;
+}
+.Software .Logo{
+  width: 70px;
+  height: 70px;
+}

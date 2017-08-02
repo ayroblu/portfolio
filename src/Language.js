@@ -5,12 +5,27 @@ import './Language.css'
 class Language extends Component {
   static propTypes = {
     children: PropTypes.node
+  , title: PropTypes.node
+  , description: PropTypes.node
+  , proficiency: PropTypes.node
   }
   render() {
-    const {children} = this.props
+    const {children, title, description, proficiency} = this.props
+    // Okay, so Title is Icon, maxwidth maxheight, add a description
     return (
       <div className='Language'>
-        {children}
+        <div className='Language-title'>
+          {title}
+        </div>
+        <div className='Language-description'>
+          {description}
+        </div>
+        <div className='Language-content'>
+          {children}
+        </div>
+        <div className='Language-proficiency'>
+          Proficiency: {proficiency}
+        </div>
       </div>
     )
   }

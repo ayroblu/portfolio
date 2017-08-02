@@ -4,19 +4,6 @@
 .App.docked {
   padding-left: 200px;
 }
-.Drawer-top {
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #D95B43;
-  overflow: auto;
-}
-.Drawer-top > span{
-  margin-left: 10px;
-  color: white;
-  font-size: 20px;
-}
 
 .App-header {
   background-color: #542437;
@@ -33,29 +20,13 @@
   padding: 0 10px;
 }
 
-.App-markdown {
-  text-align: left;
-  margin: 0 auto;
-  padding: 0 20px;
-  max-width: 700px;
-}
-.Languages {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: white;
-  padding-bottom: 10px;
-  margin: 10px 0;
-}
-.Languages > *{
-  margin: 10px 10px 0;
-}
 .npm-logo{
   width: 200px;
 }
 .medium-logo{
   width: 300px;
 }
+
 .mathjax-node-parent{
   animation: fadeIn 2s 1s backwards ease-in;
 }

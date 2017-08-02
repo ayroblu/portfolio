@@ -1,0 +1,15 @@
+.Drawer{
+}
+.Drawer-top {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #D95B43;
+  overflow: auto;
+}
+.Drawer-top > span{
+  margin-left: 10px;
+  color: white;
+  font-size: 20px;
+}

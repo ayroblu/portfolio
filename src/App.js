@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import * as MathJax from 'react-mathjax-updated'
 import GoMarkGithub from 'react-icons/lib/go/mark-github'
-import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
+import 'devicon/devicon-colors.css'
 
-import Language from './Language'
+import MediumArticles from './MediumArticles'
+import Software from './Software'
+import DrawerLayout from './DrawerLayout'
 import {cn} from './utils'
 import mediumLogo from './img/medium-lockup-dark.png'
 import npmLogo from './img/npm.png'
@@ -49,42 +51,11 @@ class App extends Component {
     const docked = window.innerWidth > 600
     return (
       <div className={cn("App", docked && 'docked')}>
-        <Drawer open={this.state.open}
+        <DrawerLayout open={this.state.open}
           docked={docked}
           onRequestChange={open=>this.setState({open})}
           width={200}
-        >
-          <a className='Drawer-top no-dec' href='https://github.com/ayroblu'>
-            <GoMarkGithub size={30} color='white'/><span>Ben's Profile</span>
-          </a>
-          <a href='#software'>
-            <MenuItem>Software Development</MenuItem>
-          </a>
-          <a href='#npm'>
-            <MenuItem>npm packages</MenuItem>
-          </a>
-          <a href='#medium'>
-            <MenuItem>Medium articles</MenuItem>
-          </a>
-          <a href='#projects'>
-            <MenuItem>Projects</MenuItem>
-          </a>
-          <a href='#react-native'>
-            <MenuItem>React Native</MenuItem>
-          </a>
-          <a href='#android'>
-            <MenuItem>Old Android Projects</MenuItem>
-          </a>
-          <a href='#other-projects'>
-            <MenuItem>Other Projects</MenuItem>
-          </a>
-          <a href='#university'>
-            <MenuItem>University of Auckland</MenuItem>
-          </a>
-          <a href='#archery'>
-            <MenuItem>Archery</MenuItem>
-          </a>
-        </Drawer>
+        />
         <div className="App-header">
           <h1>Ben Lu Portfolio</h1>
         </div>
@@ -94,77 +65,8 @@ class App extends Component {
               Hi, I'm a tinkerer and developer
             </p><a href='https://github.com/ayroblu'><GoMarkGithub size={30} /></a>
           </div>
-          <div id='software' className="App-text Languages">
-            <Language
-            >
-              <div>JavaScript</div>
-              <div>React</div>
-              <div>React Native</div>
-              <div>React Router (and others)</div>
-              <div>Redux</div>
-              <div>Flow</div>
-              <div>Electron</div>
-              <div>ESLint</div>
-              <div>Angular</div>
-              <div>Stars: 4.5</div>
-            </Language>
-            <Language
-            >
-              <div>C/C++</div>
-              <div>(look at Endace framework)</div>
-            </Language>
-            <Language
-            >
-              <div>Python</div>
-              <div>Django</div>
-              <div>numpy</div>
-              <div>OpenCV</div>
-            </Language>
-            <Language
-            >
-              <div>PHP</div>
-              <div>Yii</div>
-              <div>Symfony</div>
-            </Language>
-            <Language
-            >
-              <div>C#</div>
-              <div>Visual Basic</div>
-              <div>ASP.NET MVC</div>
-              <div>LINQ</div>
-              <div>Razor</div>
-              <div>NuGet</div>
-            </Language>
-            <Language
-            >
-              <div>SQL</div>
-              <div>PostgreSQL</div>
-              <div>MySQL</div>
-              <div>SQL Server</div>
-            </Language>
-            <Language
-            >
-              <div>LaTeX</div>
-              <div>Reports</div>
-            </Language>
-            <Language
-            >
-              <div>Ruby on Rails</div>
-              <div>JSON API</div>
-              <div>Geolocation</div>
-              <div>Active Record</div>
-              <div>Common web pages and generators</div>
-            </Language>
-            <Language
-            >
-              <div>Java</div>
-              <div>Swing</div>
-              <div>Spring</div>
-              <div>Hibernate</div>
-              <div>Kotlin</div>
-              <div>Android</div>
-              <div>Stars: 3</div>
-            </Language>
+          <div id='software'>
+            <Software />
           </div>
           <div id='npm' className="App-text">
             <img className='npm-logo' src={npmLogo} alt='npm logo' />
@@ -211,40 +113,20 @@ class App extends Component {
               </div>
             </div>
           </div>
-          <div id='medium' className="App-text">
+          <div id='medium'>
             <img className='medium-logo' src={mediumLogo} alt='medium logo' />
-            <div>
-              <a href='https://medium.com/@benlu/css-animation-fill-mode-7f39417f56ad'>
-                CSS Animation Fill Mode
-              </a>
-              <p>Date: 2017-06-??</p>
-            </div>
-            <div>
-              <a href='https://medium.com/@benlu/ssr-with-create-react-app-v2-1b8b520681d9'>
-                SSR with Create React App v2
-              </a>
-              <p>Date: 2017-06-??</p>
-              <p>Source Code: https://github.com/ayroblu/ssr-create-react-app-v2</p>
-              <p>Demo: https://ssr-cra-v2.now.sh</p>
-            </div>
-            <div>
-              <a href='https://hackernoon.com/server-side-rendering-with-create-react-app-1faf5a9d1eff'>
-                Server Side Rendering with Create React App
-              </a>
-              <p>Date: 2017-06-??</p>
-              <p>Source Code: https://github.com/ayroblu/ssr-create-react-app</p>
-            </div>
+            <MediumArticles />
           </div>
-          <div id='projects' className="App-text">
+          <div id='projects'>
             <h2>Projects</h2>
             <div>
-              <h2>Live Auckland Buses</h2>
+              <h3>Live Auckland Buses</h3>
               <p><a href='http://aklbuses.nz'>aklbuses.nz</a></p>
               <p>Shows the locations of Auckland buses in real time to the nearest 30 seconds</p>
               <p>https://github.com/ayroblu/aklbuses.nz</p>
             </div>
             <div>
-              <h2>Video Delay</h2>
+              <h3>Video Delay</h3>
               <p><a href='http://webrec.ayro.nz'>Video Delay</a></p>
               <p>Uses electron for a basic native app</p>
               <p>https://github.com/ayroblu/video-delay</p>
@@ -253,13 +135,13 @@ class App extends Component {
             <div>object-type-check?</div>
           </div>
           <div id='react-native' className="App-text">
-            <h2>React Native</h2>
+            <h3>React Native</h3>
             <div>Archery Notes - Android + iOS, thoughts, Code push ?</div>
             <div>Repo: <a href='https://github.com/ayroblu/ArcheryNotes'>https://github.com/ayroblu/ArcheryNotes</a></div>
             <div>Jest + snapshot testing</div>
           </div>
           <div id='android' className="App-text">
-            <h2>Old Android Projects (2013)</h2>
+            <h3>Old Android Projects (2013)</h3>
             <a href='https://play.google.com/store/apps/details?id=benl.student.archeryscorer'>
               <p>Archery Scorer</p>
             </a>
@@ -270,23 +152,23 @@ class App extends Component {
           <div id='other-projects' className="App-text">
             <h2>Other Projects</h2>
             <div>
-              <h2>Royal Game of Ur</h2>
+              <h3>Royal Game of Ur</h3>
               <p><a href='http://royalgameofur.site'>royalgameofur.site</a></p>
               <p>An implementation of the Royal Game of Ur based on: https://www.youtube.com/watch?v=WZskjLq040I</p>
               <p>https://github.com/ayroblu/royal-game-of-ur</p>
             </div>
             <div>
-              <h2>Ayro Site</h2>
+              <h3>Ayro Site</h3>
               <p><a href='https://ayro.nz'>ayro.nz</a></p>
               <p>Contact page: for business enquiries</p>
             </div>
             <div>
-              <h2>Archery Calculator</h2>
+              <h3>Archery Calculator</h3>
               <p>archery.ayro.nz</p>
               <p>JS Testing: Jest + equation solving</p>
             </div>
             <div>
-              <h2>My First Site</h2>
+              <h3>My First Site</h3>
               <p>ben-l.com</p>
             </div>
             <div>webgl?</div>
