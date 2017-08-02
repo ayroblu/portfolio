@@ -4,12 +4,15 @@ import GoMarkGithub from 'react-icons/lib/go/mark-github'
 import MenuItem from 'material-ui/MenuItem'
 import 'devicon/devicon-colors.css'
 
+import TitleLink from './TitleLink'
 import MediumArticles from './MediumArticles'
 import Software from './Software'
 import DrawerLayout from './DrawerLayout'
 import {cn} from './utils'
 import mediumLogo from './img/medium-lockup-dark.png'
+import gplayLogo from './img/google-play-badge.png'
 import npmLogo from './img/npm.png'
+import * as theme from './theme'
 //import * as MathJax from 'react-mathjax'
 import './App.css'
 
@@ -63,50 +66,59 @@ class App extends Component {
           <div>
             <p className="App-text">
               Hi, I'm a tinkerer and developer
-            </p><a href='https://github.com/ayroblu'><GoMarkGithub size={30} /></a>
+            </p><a className='no-color' href='https://github.com/ayroblu'><GoMarkGithub size={30} /></a>
           </div>
           <div id='software'>
+            <h2 className='SectionTitle'>
+              Software Skills
+            </h2>
             <Software />
           </div>
           <div id='npm' className="App-text">
-            <img className='npm-logo' src={npmLogo} alt='npm logo' />
+            <div className='SectionTitle'>
+              <img className='npm-logo' src={npmLogo} alt='npm logo' />
+            </div>
             <div>
               <div>
-                <a href='https://www.npmjs.com/package/object-type-check'>
-                  <MenuItem>
+                <TitleLink>
+                  <a href='https://www.npmjs.com/package/object-type-check'>
                     Object Type Check
-                  </MenuItem>
-                </a>
+                  </a>
+                </TitleLink>
                 <div>
-                  <p>This is a runtime type checker, I wrote this for verifying serialised data</p>
+                  <a href='https://coveralls.io/github/ayroblu/object-type-check?branch=master'>
+                    <img src='https://coveralls.io/repos/github/ayroblu/object-type-check/badge.svg?branch=master' />
+                  </a>
+                  <p>This is a runtime type checker, I wrote this for verifying serialised data, has 100% test coverage</p>
+
                 </div>
               </div>
               <div>
-                <a href='https://www.npmjs.com/package/react-native-redux-log-monitor'>
-                  <MenuItem>
+                <TitleLink>
+                  <a href='https://www.npmjs.com/package/react-native-redux-log-monitor'>
                     React Native Redux DevTools Log Monitor
-                  </MenuItem>
-                </a>
+                  </a>
+                </TitleLink>
                 <div>
                   <p>React Native Navigation has a very easy drawer system, which means you can add this for a slide in from the right option to display redux data without needing to use JS Debugging</p>
                 </div>
               </div>
               <div>
-                <a href='https://www.npmjs.com/package/db-difftool'>
-                  <MenuItem>
+                <TitleLink>
+                  <a href='https://www.npmjs.com/package/db-difftool'>
                     DB Difftool
-                  </MenuItem>
-                </a>
+                  </a>
+                </TitleLink>
                 <div>
                   <p>Rather than using migrations, its probably easier just to calculate a diff between a lock configuration and an existing database</p>
                 </div>
               </div>
               <div>
-                <a href='https://www.npmjs.com/package/redux-add'>
-                  <MenuItem>
+                <TitleLink>
+                  <a href='https://www.npmjs.com/package/redux-add'>
                     Redux Add
-                  </MenuItem>
-                </a>
+                  </a>
+                </TitleLink>
                 <div>
                   <p>A simple CLI tool for adding a couple of redux files</p>
                 </div>
@@ -114,20 +126,20 @@ class App extends Component {
             </div>
           </div>
           <div id='medium'>
-            <img className='medium-logo' src={mediumLogo} alt='medium logo' />
+            <div className='SectionTitle'>
+              <img className='medium-logo' src={mediumLogo} alt='medium logo' />
+            </div>
             <MediumArticles />
           </div>
           <div id='projects'>
-            <h2>Projects</h2>
+            <h2 className='SectionTitle'>Projects</h2>
             <div>
-              <h3>Live Auckland Buses</h3>
-              <p><a href='http://aklbuses.nz'>aklbuses.nz</a></p>
+              <TitleLink><a href='https://aklbuses.nz'>Live Auckland Buses</a></TitleLink>
               <p>Shows the locations of Auckland buses in real time to the nearest 30 seconds</p>
               <p>https://github.com/ayroblu/aklbuses.nz</p>
             </div>
             <div>
-              <h3>Video Delay</h3>
-              <p><a href='http://webrec.ayro.nz'>Video Delay</a></p>
+              <TitleLink><a href='https://webrec.ayro.nz'>Video Delay</a></TitleLink>
               <p>Uses electron for a basic native app</p>
               <p>https://github.com/ayroblu/video-delay</p>
             </div>
@@ -135,64 +147,67 @@ class App extends Component {
             <div>object-type-check?</div>
           </div>
           <div id='react-native' className="App-text">
-            <h3>React Native</h3>
+            <h2 className='SectionTitle'>React Native</h2>
             <div>Archery Notes - Android + iOS, thoughts, Code push ?</div>
             <div>Repo: <a href='https://github.com/ayroblu/ArcheryNotes'>https://github.com/ayroblu/ArcheryNotes</a></div>
             <div>Jest + snapshot testing</div>
           </div>
           <div id='android' className="App-text">
-            <h3>Old Android Projects (2013)</h3>
+            <h2 className='SectionTitle'>Old Android Projects (2013)</h2>
+            <p>Archery Scorer</p>
             <a href='https://play.google.com/store/apps/details?id=benl.student.archeryscorer'>
-              <p>Archery Scorer</p>
+              <img src={gplayLogo} className='GoogleLink' alt='Archery Scorer Link' />
             </a>
+            <p>NZ Weather and Traffic</p>
             <a href='https://play.google.com/store/apps/details?id=benl.student.datacol&hl=en'>
-              <p>NZ Weather and Traffic</p>
+              <img src={gplayLogo} className='GoogleLink' alt='NZ Weather and Traffic Link' />
             </a>
           </div>
           <div id='other-projects' className="App-text">
-            <h2>Other Projects</h2>
+            <h2 className='SectionTitle'>Other Projects</h2>
             <div>
-              <h3>Royal Game of Ur</h3>
-              <p><a href='http://royalgameofur.site'>royalgameofur.site</a></p>
-              <p>An implementation of the Royal Game of Ur based on: https://www.youtube.com/watch?v=WZskjLq040I</p>
+              <TitleLink><a href='http://royalgameofur.site'>Royal Game of Ur</a></TitleLink>
+              <p>Based on this fantastic video, where the basic rules are explained</p>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/WZskjLq040I" frameBorder="0" allowFullScreen></iframe>
               <p>https://github.com/ayroblu/royal-game-of-ur</p>
             </div>
             <div>
-              <h3>Ayro Site</h3>
-              <p><a href='https://ayro.nz'>ayro.nz</a></p>
+              <TitleLink><a href='https://ayro.nz'>Ayro Site</a></TitleLink>
               <p>Contact page: for business enquiries</p>
             </div>
             <div>
-              <h3>Archery Calculator</h3>
-              <p>archery.ayro.nz</p>
+              <TitleLink><a href='https://archery.ayro.nz'>Archery Calculator</a></TitleLink>
               <p>JS Testing: Jest + equation solving</p>
             </div>
             <div>
-              <h3>My First Site</h3>
-              <p>ben-l.com</p>
+              <TitleLink><a href='http://ben-l.com'>My First Site</a></TitleLink>
+              <p>This is my first ever website, hosted on google apps, with python, and has a pretty nice transition which was built to be compatible (limited) with ie6</p>
             </div>
             <div>webgl?</div>
             <div>selenium test?</div>
           </div>
           <div id='university' className="App-text">
-            <h2>University of Auckland - Bachelor of Commerce</h2>
-            <p>Major in Economics: (just show some old notes?)</p>
-            <p>Finance</p>
-          </div>
-          <div className="App-text">
-            <h2> University of Auckland - Bachelor of Engineering (Honours)</h2>
-            <p>4th year project + video -> ANSYS</p>
-            <p>Geothermal</p>
-            <p>Operations Research</p>
-            <p>Fluid Dynamics</p>
-            <p>Software Development</p>
-          </div>
-          <div className="App-text">
-            <h2>University of Washington - Exchange</h2>
-            <p>photos</p>
+            <h2 className='SectionTitle'>University</h2>
+            <div>
+              <h3>University of Auckland - Bachelor of Commerce</h3>
+              <p>Major in Economics: (just show some old notes?)</p>
+              <p>Finance</p>
+            </div>
+            <div className="App-text">
+              <h3> University of Auckland - Bachelor of Engineering (Honours)</h3>
+              <p>4th year project + video -> ANSYS</p>
+              <p>Geothermal</p>
+              <p>Operations Research</p>
+              <p>Fluid Dynamics</p>
+              <p>Software Development</p>
+            </div>
+            <div className="App-text">
+              <h3>University of Washington - Exchange</h3>
+              <p>photos</p>
+            </div>
           </div>
           <div id='archery' className="App-text">
-            <h2>Archery</h2>
+            <h2 className='SectionTitle'>Archery</h2>
             <p>Photos of all 3 bows</p>
             <h3>Projectile Motion equations</h3>
             <p>These are just some basic projectile motion equations which allow you to solve for arrow positioning</p>
@@ -213,6 +228,14 @@ class App extends Component {
                 <MathJax.Node>{sightHeight}</MathJax.Node>
               </div>
             </MathJax.Context>
+          </div>
+          <div>
+            <h2>Palette</h2>
+            <div style={{backgroundColor: theme.gold, width: 50, height: 50, margin: 'auto'}} />
+            <div style={{backgroundColor: theme.orange, width: 50, height: 50, margin: 'auto'}} />
+            <div style={{backgroundColor: theme.red, width: 50, height: 50, margin: 'auto'}} />
+            <div style={{backgroundColor: theme.purple, width: 50, height: 50, margin: 'auto'}} />
+            <div style={{backgroundColor: theme.grey, width: 50, height: 50, margin: 'auto'}} />
           </div>
         </div>
       </div>

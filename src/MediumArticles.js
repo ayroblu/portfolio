@@ -13,9 +13,11 @@ class Article extends Component {
     const {title, titleLink, description, source, date} = this.props
     return (
       <article className='Article'>
-        <a href={titleLink}>
-          <h3>{title}</h3>
-        </a>
+        <h3>
+          <a href={titleLink}>
+            {title}
+          </a>
+        </h3>
         <p className='Article-date'>Date Written: {date}</p>
         <p className='Article-description'>{description}</p>
         <p className='Article-github'>{source}</p>
