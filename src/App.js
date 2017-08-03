@@ -75,7 +75,7 @@ class App extends Component {
         <div className='App-content'>
           <div>
             <p className="App-text">
-              Hi, I'm a tinkerer and developer, I take an interest in a lot of different fields, these are some of the more technical things
+              Hi, I'm a tinkerer and developer, I take an interest in a lot of different fields, these are some of the more technical things. Checkout my github for a full list of projects.
             </p><a className='no-color' href='https://github.com/ayroblu'><GoMarkGithub size={50} /></a>
           </div>
           {false &&

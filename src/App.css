@@ -98,6 +98,11 @@ img.FullSize{
   padding: 20px;
   margin: 0;
   background-color: rgba(0,0,0,0.7);
+  opacity: 0.3;
+  transition: all 0.2s;
+}
+.captionedImage:hover > .caption{
+  opacity: 1;
 }
 @media (max-width: 600px){
   .captionedImage > .caption{
