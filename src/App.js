@@ -259,7 +259,7 @@ class App extends Component {
             </div>
             <div className='App-videos'>
               <div className='captionedImage'>
-                <img src={geotherm} alt='Production data for example geothermal field' />
+                <img className='FullSize' src={geotherm} alt='Production data for example geothermal field' />
                 <span className='caption'>
                   The calculated production output from a model Geothermal field
                 </span>
@@ -288,7 +288,7 @@ class App extends Component {
               <h3>University of Washington - Exchange</h3>
             </div>
             <div>
-              <img src={uw} alt='University of Washington Quad' className='Washington' />
+              <img src={uw} alt='University of Washington Quad' className='FullSize' />
             </div>
           </div>
           <div id='archery'>
