@@ -1,4 +1,5 @@
-.Drawer{
+.Drawer > *{
+  backface-visibility: hidden;
 }
 .Drawer-top {
   padding: 10px 0;

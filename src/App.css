@@ -34,6 +34,9 @@
   margin-left: auto;
   margin-right: auto;
 }
+img.Washington{
+  width: 100%;
+}
 .video-parent-container {
   max-width: 800px;
   margin: auto;

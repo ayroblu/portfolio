@@ -18,6 +18,7 @@ import subDrag from './img/simplesubproper.png'
 import aklbuses from './img/aklbuses-cropped.png'
 import videoDelay from './img/video-delay.jpg'
 import geotherm from './img/geotherm-steam-field.png'
+import uw from './img/uni-washington.jpg'
 import mediumLogo from './img/medium-lockup-dark.png'
 import gplayLogo from './img/google-play-badge.png'
 import npmLogo from './img/npm.png'
@@ -247,12 +248,14 @@ class App extends Component {
             <h2 className='SectionTitle'>University</h2>
             <div>
               <h3>University of Auckland - Bachelor of Commerce</h3>
-              <p>Major in Economics: (just show some old notes?)</p>
-              <p>Finance</p>
+              <p>Major in Economics, including international trade, how environmental factors affect how countries struggle or thrive in different conditions.</p>
+              <p>Various topics in finance, including Black–Scholes, put call parity, Discounted Cash Flows and analyzing corporate finances</p>
+              <p>Various topics in entrepreneurship, including Venture Capital, Cap tables, IPOs and valuations</p>
             </div>
             <div className="App-text">
               <h3>University of Auckland - Bachelor of Engineering (Honours)</h3>
               <p>This degree covered many different mathematical and modelling topics including Operations Research, Fluid Dynamics, Geothermal Engineering and Software Development</p>
+              <p>Below are some pictures from a Geothermal course and from my Honours project</p>
             </div>
             <div className='App-videos'>
               <div className='captionedImage'>
@@ -283,7 +286,9 @@ class App extends Component {
             </div>
             <div className="App-text">
               <h3>University of Washington - Exchange</h3>
-              <p>photos</p>
+            </div>
+            <div>
+              <img src={uw} alt='University of Washington Quad' className='Washington' />
             </div>
           </div>
           <div id='archery'>

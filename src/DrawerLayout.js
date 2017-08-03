@@ -11,7 +11,7 @@ class DrawerLayout extends Component {
   }
   render() {
     return (
-      <Drawer {...this.props}>
+      <Drawer {...this.props} className='Drawer'>
         <a className='Drawer-top no-dec' href='https://github.com/ayroblu'>
           <GoMarkGithub size={30} color='white'/><span>Ben's Profile</span>
         </a>
@@ -38,7 +38,7 @@ class DrawerLayout extends Component {
           <MenuItem>Other Projects</MenuItem>
         </a>
         <a href='#university'>
-          <MenuItem>University of Auckland</MenuItem>
+          <MenuItem>University</MenuItem>
         </a>
         <a href='#archery'>
           <MenuItem>Archery</MenuItem>
