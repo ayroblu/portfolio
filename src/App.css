@@ -113,6 +113,24 @@ img.FullSize{
 .App-logo{
   margin: 20px;
 }
+.App video{
+  background-color: black;
+  width: 100%;
+}
+.tapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.relative {
+  position: relative;
+}
 
 .video-container iframe,
 .video-container object,

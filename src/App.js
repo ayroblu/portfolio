@@ -48,6 +48,17 @@ class App extends Component {
   }
   componentDidMount() {
     window.addEventListener("resize", this.updatePage)
+    const videos = this.videos = Array.from(document.querySelectorAll('video'))
+    if (!videos[0].paused){
+      return
+    }
+    const startVideos = ()=>{
+      videos.map(v=>v.play())
+      this.forceUpdate()
+      window.removeEventListener('click', startVideos)
+    }
+    window.addEventListener('click', startVideos)
+    this.forceUpdate()
   }
   componentWillUnmount() {
     window.removeEventListener("resize", this.updatePage)
@@ -62,6 +73,7 @@ class App extends Component {
   }
   render() {
     const docked = window.innerWidth > 600
+    const isPaused = this.videos && this.videos[0].paused
     return (
       <div className={cn("App", docked && 'docked')}>
         <DrawerLayout open={this.state.open}
@@ -233,7 +245,9 @@ class App extends Component {
               <TitleLink><a href='http://ben-l.com'>My First Site</a></TitleLink>
               <p>This is my first ever website, hosted on google apps, with python, and has a pretty nice transition which was built to be compatible (limited) with ie6</p>
               <div className='captionedImage'>
-                <video autoPlay type="video/mp4" loop>
+                {isPaused &&
+                <div className='tapper'>Tap here</div>}
+                <video muted autoPlay type="video/mp4" loop>
                   <source src={firstWebVid} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
@@ -275,14 +289,22 @@ class App extends Component {
                   <img src={subDrag} alt='Sub drag' className='subDragImage' />
                 </div>
               </div>
-              <video autoPlay type="video/mp4" loop>
-                <source src={vortVid} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              <video autoPlay type="video/mp4" loop>
-                <source src={flapVid} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              <div className='relative'>
+                <video autoPlay type="video/mp4" loop muted>
+                  <source src={vortVid} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                {isPaused &&
+                <div className='tapper'>Tap here</div>}
+              </div>
+              <div className='relative'>
+                <video autoPlay type="video/mp4" loop muted>
+                  <source src={flapVid} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                {isPaused &&
+                <div className='tapper'>Tap here</div>}
+              </div>
             </div>
             <div className="App-text">
               <h3>University of Washington - Exchange</h3>
