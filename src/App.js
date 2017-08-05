@@ -49,7 +49,7 @@ class App extends Component {
   componentDidMount() {
     window.addEventListener("resize", this.updatePage)
     const videos = this.videos = Array.from(document.querySelectorAll('video'))
-    if (!videos[0].paused){
+    if (!videos.length || !videos[0].paused){
       return
     }
     const startVideos = ()=>{
@@ -73,7 +73,7 @@ class App extends Component {
   }
   render() {
     const docked = window.innerWidth > 600
-    const isPaused = this.videos && this.videos[0].paused
+    const isPaused = this.videos && !!this.videos.length && this.videos[0].paused
     return (
       <div className={cn("App", docked && 'docked')}>
         <DrawerLayout open={this.state.open}
