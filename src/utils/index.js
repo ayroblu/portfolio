@@ -1,3 +1,3 @@
-export function cn(){
-  return Array.from(arguments).filter(a=>a).join(' ')
+export function cn(...args){
+  return args.filter(a=>a).join(' ')
 }
