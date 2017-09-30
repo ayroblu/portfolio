@@ -32,6 +32,13 @@ class MediumArticles extends Component {
     return (
       <div className='MediumArticles'>
         <Article
+          title='Server Side Rendering with Create React App v2.1'
+          titleLink='https://medium.com/@benlu/ssr-with-create-react-app-v2-1-ee83fb767327'
+          description='Covering some of the nuances of Create React App and SSR, including data loading, images and babel build'
+          source='https://github.com/ayroblu/ssr-cra-v2.1'
+          date='2017-09-21'
+        />
+        <Article
           title='CSS Animation Fill Mode'
           titleLink='https://medium.com/@benlu/css-animation-fill-mode-7f39417f56ad'
           description='A brief explanation of the css animation fill mode with an emphasis on backward'
