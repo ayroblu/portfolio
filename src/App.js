@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import * as MathJax from "react-mathjax-updated";
+import * as MathJax from "react-mathjax";
 import GoMarkGithub from "react-icons/lib/go/mark-github";
 import "devicon/devicon-colors.css";
 

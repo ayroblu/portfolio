@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import * as MathJax from 'react-mathjax-updated'
+import * as MathJax from 'react-mathjax'
 //import PropTypes from 'prop-types'
 
 import CIcon from 'devicon/icons/c/c-original.svg'
